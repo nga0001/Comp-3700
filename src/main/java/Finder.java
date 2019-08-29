@@ -1,10 +1,10 @@
 public class Finder {
 
 
-   public static Integer findMax(int[] intArray) {
+   public static Integer findMax(Integer[] intArray) {
        int currentMax;
        int finalMax;
-       if (intArray.length == 0) {
+       if (intArray == null || intArray.length == 0) {
            return null;
        }
        else {
@@ -21,10 +21,10 @@ public class Finder {
        return finalMax;
    }
 
-    public static Integer findMin(int[] intArray) {
+    public static Integer findMin(Integer[] intArray) {
         int currentMin;
         int finalMin;
-        if (intArray.length == 0) {
+        if (intArray == null || intArray.length == 0) {
             return null;
         }
         else {

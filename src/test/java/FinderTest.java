@@ -5,52 +5,52 @@ import static org.junit.Assert.assertEquals;
 
 public class FinderTest {
 
-    int[] nullArray = null;
-    int[] emptyArray = {};
+    Integer[] nullArray = null;
+    Integer[] emptyArray = {};
     @Test
     public void findMaxTest()  {
         Finder test1 = new Finder();
-        int[] array1 = {1, 3, 4, 7};
-        int expected = 7;
-        int actual = test1.findMax(array1);
+        Integer[] array1 = {1, 3, 4, 7};
+        Integer expected = 7;
+        Integer actual = test1.findMax(array1);
         Assert.assertEquals(expected, actual);
 
     }
     @Test
     public void findMinTest() {
         Finder test2 = new Finder();
-        int[] array2 = {1, 2, 5, 0, 9};
-        int expected = 0;
-        int actual = test2.findMin(array2);
+        Integer[] array2 = {1, 2, 5, 0, 9};
+        Integer expected = 0;
+        Integer actual = test2.findMin(array2);
         Assert.assertEquals(expected, actual);
     }
     @Test
     public void findMaxTest_Null() {
         Finder test3 = new Finder();
 
-        int result = test3.findMax(nullArray);
-        assertEquals(null, result);
+        Integer result = test3.findMax(nullArray);
+        Assert.assertEquals(null, result);
 
     }
     @Test
     public void findMinTest_Null() {
         Finder test4 = new Finder();
 
-        int result = test4.findMin(nullArray);
+        Integer result = test4.findMin(nullArray);
         Assert.assertEquals(null, result);
     }
     @Test
     public void findMaxTest_Empty() {
         Finder test5 = new Finder();
 
-        int result = test5.findMax(emptyArray);
+        Integer result = test5.findMax(emptyArray);
         Assert.assertEquals(null, result);
     }
     @Test
     public void findMinTest_Empty() {
         Finder test6 = new Finder();
 
-        int result = test6.findMin(emptyArray);
-        Assert.assertNull(emptyArray);
+        Integer result = test6.findMin(emptyArray);
+        Assert.assertEquals(null, result);
     }
 }
